@@ -1,0 +1,16 @@
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.exe
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.deps.json
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.runtimeconfig.json
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.runtimeconfig.dev.json
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\bin\Debug\net5.0\ref\ConsoleApp1.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.pdb
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.csproj.AssemblyReference.cache
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.AssemblyInfoInputs.cache
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.AssemblyInfo.cs
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\obj\Debug\net5.0\ref\ConsoleApp1.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.pdb
+G:\My Drive\Yasamin\C#\AdventOfCode\Day2\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.genruntimeconfig.cache

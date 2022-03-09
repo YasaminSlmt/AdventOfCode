@@ -1,0 +1,16 @@
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\bin\Debug\net5.0\Day1Solution.exe
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\bin\Debug\net5.0\Day1Solution.deps.json
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\bin\Debug\net5.0\Day1Solution.runtimeconfig.json
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\bin\Debug\net5.0\Day1Solution.runtimeconfig.dev.json
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\bin\Debug\net5.0\Day1Solution.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\bin\Debug\net5.0\ref\Day1Solution.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\bin\Debug\net5.0\Day1Solution.pdb
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\obj\Debug\net5.0\Day1Solution.GeneratedMSBuildEditorConfig.editorconfig
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\obj\Debug\net5.0\Day1Solution.AssemblyInfoInputs.cache
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\obj\Debug\net5.0\Day1Solution.AssemblyInfo.cs
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\obj\Debug\net5.0\Day1Solution.csproj.CoreCompileInputs.cache
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\obj\Debug\net5.0\Day1Solution.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\obj\Debug\net5.0\ref\Day1Solution.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\obj\Debug\net5.0\Day1Solution.pdb
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\obj\Debug\net5.0\Day1Solution.genruntimeconfig.cache
+G:\My Drive\Yasamin\C#\AdventOfCode\Day1\Day1Solution\obj\Debug\net5.0\Day1Solution.csproj.AssemblyReference.cache
