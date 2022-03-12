@@ -14,51 +14,72 @@ namespace Day3Solution
 
             string[] inputTxt = File.ReadAllLines(@"G:\My Drive\Yasamin\C#\AdventOfCode\Day3\input.txt");
 
-            // part 1
-            int[,] mat = new int[inputTxt.Length, inputTxt[0].Length];
-            int[] repeatNum = new int[inputTxt[0].Length];
 
+            int gamma =0,epsilon = 0;
+            
+           
+            int length = inputTxt[0].Length;
 
-            for (int iLine = 0; iLine < inputTxt.Length; iLine++)
+            for (int dig = 0 ; dig < length; dig ++)
             {
-                char[] separateLine = inputTxt[iLine].ToCharArray();
-                for (int num = 0; num < separateLine.Length; num++)
+                //if (inputTxt.Aggregate(0, (s, line) => s + Convert.ToInt32(line[length - 1 - dig])) > inputTxt.Length / 2)
+                if (inputTxt.Aggregate(0, (s, line) => s + (int)Char.GetNumericValue(line[length - (dig + 1)])) > inputTxt.Length / 2)
                 {
-                    mat[iLine, num] = (int)Char.GetNumericValue(separateLine[num]);
-                    if (mat[iLine, num] == 1)
-                    {
-                        repeatNum[num] += 1;
-                    }
-                    else
-                    {
-                        repeatNum[num] -= 1;
-                    }
+                    gamma |= 1 << dig;
                 }
+                else
+                    epsilon |= 1 << dig;
 
 
             }
 
-            //calcuate gamma and epsilon (convert from binary to decimal)
-            int gamma = 0;
-            int epsilon = 0;
-            for (int i = inputTxt[0].Length; i-- > 0;)
-            {
-                if (repeatNum[i] > 0)
-                {
-                    // Most repeated digit is 1
-                    gamma += (int)Math.Pow(2, (inputTxt[0].Length - i - 1));
+            Console.WriteLine(gamma* epsilon);
 
+
+            // Part 2
+            string[] txtTemp = inputTxt;
+            int idx = 0;
+            while (txtTemp.Length > 1)
+            {
+                if (txtTemp.Aggregate(0, (s, line) => s + (int)Char.GetNumericValue(line[idx])) >= txtTemp.Length / 2.0)
+                {
+                    txtTemp = txtTemp.Where((line) => line[idx] == '1').ToArray();
+                    
                 }
                 else
                 {
-                    // Most repeated digit is 0
-                    epsilon += (int)Math.Pow(2, (inputTxt[0].Length - i - 1));
-
+                    txtTemp = txtTemp.Where((line) => line[idx] == '0').ToArray();
                 }
-
+                Console.WriteLine(txtTemp);
+                Console.WriteLine((txtTemp.Aggregate(0, (s, line) => s + (int)Char.GetNumericValue(line[idx]))));
+                
+                idx += 1;
             }
 
-            Console.WriteLine(epsilon * gamma);
+            string[] ox = txtTemp;
+            Console.WriteLine(ox[0]);
+
+            txtTemp = inputTxt;
+
+            idx = 0;
+            while (txtTemp.Length > 1)
+            {
+                if (txtTemp.Aggregate(0, (s, line) => s + (int)Char.GetNumericValue(line[idx])) >= txtTemp.Length / 2.0)
+                {
+                    txtTemp = txtTemp.Where((line) => line[idx] == '0').ToArray();
+                }
+                else
+                {
+                    txtTemp = txtTemp.Where((line) => line[idx] == '1').ToArray();
+                }
+                idx += 1;
+            }
+
+
+            string[] co2 = txtTemp;
+
+
+            Console.WriteLine(Convert.ToInt32(ox[0],2) * Convert.ToInt32(co2[0], 2));
 
 
 
