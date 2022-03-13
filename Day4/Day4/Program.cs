@@ -137,13 +137,25 @@ namespace Day3Solution
                 cardNum++;
             }
 
+
+            // part 1
             Card winningCard = cards.Aggregate((min, x) => x.winRound < min.winRound ? x : min);
             int s = 0;
             foreach (Number num in winningCard.numbers)
                  s+=(num.check == false ? num.value : 0);
 
 
-            Console.WriteLine("Final score is {0}", s*winningCard.lastDraw);
+            Console.WriteLine("Part 1: Final score is {0}", s*winningCard.lastDraw);
+
+
+            // part 1
+            winningCard = cards.Aggregate((max, x) => x.winRound > max.winRound ? x : max);
+            s = 0;
+            foreach (Number num in winningCard.numbers)
+                s += (num.check == false ? num.value : 0);
+
+
+            Console.WriteLine("Part 2: Final score is {0}", s * winningCard.lastDraw);
 
 
 
