@@ -1,0 +1,16 @@
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\bin\Debug\net5.0\Day4.exe
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\bin\Debug\net5.0\Day4.deps.json
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\bin\Debug\net5.0\Day4.runtimeconfig.json
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\bin\Debug\net5.0\Day4.runtimeconfig.dev.json
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\bin\Debug\net5.0\Day4.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\bin\Debug\net5.0\ref\Day4.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\bin\Debug\net5.0\Day4.pdb
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\obj\Debug\net5.0\Day4.csproj.AssemblyReference.cache
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\obj\Debug\net5.0\Day4.GeneratedMSBuildEditorConfig.editorconfig
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\obj\Debug\net5.0\Day4.AssemblyInfoInputs.cache
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\obj\Debug\net5.0\Day4.AssemblyInfo.cs
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\obj\Debug\net5.0\Day4.csproj.CoreCompileInputs.cache
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\obj\Debug\net5.0\Day4.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\obj\Debug\net5.0\ref\Day4.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\obj\Debug\net5.0\Day4.pdb
+G:\My Drive\Yasamin\C#\AdventOfCode\Day4\Day4\obj\Debug\net5.0\Day4.genruntimeconfig.cache
