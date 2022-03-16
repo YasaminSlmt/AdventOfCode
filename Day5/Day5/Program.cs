@@ -14,12 +14,13 @@ namespace Day5Solution
         public int x2 { get; set; }
         public int y2 { get; set; }
 
-        public Line()
+        public Line(int X1, int Y1, int X2, int Y2)
         {
-            x1 = 0;
-            x2 = 0;
-            y1 = 0;
-            y2 = 0;
+            x1 = X1;
+            x2 = X2;
+
+            y1 = Y1;
+            y2 = Y2;
         }
 
     }
@@ -43,23 +44,29 @@ namespace Day5Solution
         {
 
             string[] inputTxt = File.ReadAllLines(@"G:\My Drive\Yasamin\C#\AdventOfCode\Day5\input - Test.txt");
-
+            int nLines = inputTxt.Count();
 
             int[,] board = new int[999, 999]; // Should be modified so that the board size is more dynamic and based on the maximum x and t detected in the input
-            Line[] lines = new Line[inputTxt.Length];
+            var lines = new List<Line>();
             string[] splitStrs = new string[] { ",", "-> " };
 
             int lineCount = 0;
 
-            foreach (Line line in lines)
+            for (int i = 0; i < nLines; i++)
             {
                 string[] splitLine = inputTxt[lineCount].Split(splitStrs, StringSplitOptions.None);
-                line.x1 = Convert.ToInt32(splitLine[0]);
-                line.y1 = Convert.ToInt32(splitLine[1]);
-                line.x2 = Convert.ToInt32(splitLine[2]);
-                line.y1 = Convert.ToInt32(splitLine[3]);
+                int x1 = Convert.ToInt32(splitLine[0]);
+                int y1 = Convert.ToInt32(splitLine[1]);
+                int x2 = Convert.ToInt32(splitLine[2]);
+                int y2 = Convert.ToInt32(splitLine[3]);
 
-                lineCount++;
+                lines.Add(new Line(x1, y1, x2, y2));
+            }
+
+            foreach (Line line in lines)
+            {
+
+
 
                 if ((line.x1 == line.x2))
                 {
