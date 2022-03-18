@@ -4,6 +4,7 @@ using System.Linq;
 using System.IO;
 using System.Collections.Generic;
 
+
 namespace Day5Solution
 {
 
@@ -43,10 +44,10 @@ namespace Day5Solution
         static void Main(string[] args)
         {
 
-            string[] inputTxt = File.ReadAllLines(@"G:\My Drive\Yasamin\C#\AdventOfCode\Day5\input - Test.txt");
+            string[] inputTxt = File.ReadAllLines(@"G:\My Drive\Yasamin\C#\AdventOfCode\Day5\input.txt");
             int nLines = inputTxt.Count();
 
-            int[,] board = new int[999, 999]; // Should be modified so that the board size is more dynamic and based on the maximum x and t detected in the input
+            int[,] board = new int[1000, 1000]; // Should be modified so that the board size is more dynamic and based on the maximum x and t detected in the input
             var lines = new List<Line>();
             string[] splitStrs = new string[] { ",", "-> " };
 
@@ -61,33 +62,87 @@ namespace Day5Solution
                 int y2 = Convert.ToInt32(splitLine[3]);
 
                 lines.Add(new Line(x1, y1, x2, y2));
+                lineCount++;
             }
 
             foreach (Line line in lines)
             {
 
 
-
+                // This is really ugly ... should be more optimized
                 if ((line.x1 == line.x2))
                 {
-                    Enumerable.Range(Math.Min(line.y1, line.y2), Math.Max(line.y1, line.y2))
+                    Enumerable.Range(Math.Min(line.y1, line.y2), (Math.Max(line.y1, line.y2) - Math.Min(line.y1, line.y2) + 1))
                                    .Select(y => board[y, line.x1]++)
                                    .ToArray();
                 }
                 else if((line.y1 == line.y2))
                 {
-                    Enumerable.Range(Math.Min(line.x1, line.x2), Math.Max(line.x1, line.x2))
-                                                .Select(x => board[line.y1, x]++)
-                                                .ToArray();
 
+                    Enumerable.Range(Math.Min(line.x1, line.x2), (Math.Max(line.x1, line.x2) - Math.Min(line.x1, line.x2) + 1))
+                                              .Select(x => board[line.y1, x]++)
+                                              .ToArray();
+                    int a = 1;
+
+                }
+                else if ((line.y1 > line.y2 && line.x1 > line.x2))
+                {
+                    // southeast to northwest
+                    Enumerable.Range(0, (Math.Abs(line.x1 - line.x2) + 1))
+                          .Select((x,y) => board[line.y2+y, line.x2+x]++)
+                          .ToArray();
+
+                }
+                else if ((line.y1 < line.y2 && line.x1 < line.x2))
+                {
+                    // northwest to southeast
+                    Enumerable.Range(0, (Math.Abs(line.x1 - line.x2) + 1))
+                            .Select((x, y) => board[line.y1 + y, line.x1 + x]++)
+                            .ToArray();
+
+                }
+                else if ((line.y1 > line.y2 && line.x1 < line.x2))
+                {
+                    // southwest to northeast
+                    Enumerable.Range(0, (Math.Abs(line.x1 - line.x2) + 1))
+                             .Select((x, y) => board[line.y2 + y, line.x2 - x]++)
+                             .ToArray();
+
+                }
+                else if ((line.y1 < line.y2 && line.x1 > line.x2))
+                {
+                    // northeast to southwest
+                    Enumerable.Range(0, (Math.Abs(line.x1 - line.x2) + 1))
+                              .Select((x, y) => board[line.y2 - y, line.x2 + x]++)
+                               .ToArray();
+
+                }
+                else
+                {
+                    Console.WriteLine("Some other combination");
                 }
 
 
             }
             
-            
 
-            
+            int sum = 0;
+
+            for (int i = 0; i < board.GetLength(1); i++)
+            {
+                for (int j = 0; j < board.GetLength(1); j++)
+                {
+                    sum += (board[i,j] > 1 ? 1 : 0);
+                }
+            }
+
+            Console.WriteLine("Sum is {0}", sum);
+
+
+
+
+
+
 
 
 
