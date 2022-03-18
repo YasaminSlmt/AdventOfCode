@@ -25,19 +25,19 @@ namespace Day5Solution
         }
 
     }
-    public class Point
-    {
-        public int x { get; set; }
-        public int y { get; set; }
-        public int value { get; set; }
+    //public class Point
+    //{
+    //    public int x { get; set; }
+    //    public int y { get; set; }
+    //    public int value { get; set; }
 
-        public Point(int X, int Y)
-        {
-            x = X;
-            y = Y;
-            value = 0;
-        }
-    }
+    //    public Point(int X, int Y)
+    //    {
+    //        x = X;
+    //        y = Y;
+    //        value = 0;
+    //    }
+    //}
 
     class Program
     {
@@ -69,57 +69,41 @@ namespace Day5Solution
             {
 
 
-                // This is really ugly ... should be more optimized
                 if ((line.x1 == line.x2))
                 {
-                    Enumerable.Range(Math.Min(line.y1, line.y2), (Math.Max(line.y1, line.y2) - Math.Min(line.y1, line.y2) + 1))
+                    // Horizontal line
+                    int nPoints = Math.Max(line.y1, line.y2) - Math.Min(line.y1, line.y2) + 1;
+                    int startY = Math.Min(line.y1, line.y2);
+
+                    Enumerable.Range(startY, nPoints)
                                    .Select(y => board[y, line.x1]++)
                                    .ToArray();
                 }
                 else if((line.y1 == line.y2))
                 {
 
-                    Enumerable.Range(Math.Min(line.x1, line.x2), (Math.Max(line.x1, line.x2) - Math.Min(line.x1, line.x2) + 1))
+                    // Vertical line
+                    int nPoints = Math.Max(line.x1, line.x2) - Math.Min(line.x1, line.x2) + 1;
+                    int startX = Math.Min(line.x1, line.x2);
+                    
+                    Enumerable.Range(startX, nPoints)
                                               .Select(x => board[line.y1, x]++)
                                               .ToArray();
-                    int a = 1;
-
                 }
-                else if ((line.y1 > line.y2 && line.x1 > line.x2))
-                {
-                    // southeast to northwest
-                    Enumerable.Range(0, (Math.Abs(line.x1 - line.x2) + 1))
-                          .Select((x,y) => board[line.y2+y, line.x2+x]++)
-                          .ToArray();
-
-                }
-                else if ((line.y1 < line.y2 && line.x1 < line.x2))
-                {
-                    // northwest to southeast
-                    Enumerable.Range(0, (Math.Abs(line.x1 - line.x2) + 1))
-                            .Select((x, y) => board[line.y1 + y, line.x1 + x]++)
-                            .ToArray();
-
-                }
-                else if ((line.y1 > line.y2 && line.x1 < line.x2))
-                {
-                    // southwest to northeast
-                    Enumerable.Range(0, (Math.Abs(line.x1 - line.x2) + 1))
-                             .Select((x, y) => board[line.y2 + y, line.x2 - x]++)
-                             .ToArray();
-
-                }
-                else if ((line.y1 < line.y2 && line.x1 > line.x2))
-                {
-                    // northeast to southwest
-                    Enumerable.Range(0, (Math.Abs(line.x1 - line.x2) + 1))
-                              .Select((x, y) => board[line.y2 - y, line.x2 + x]++)
-                               .ToArray();
-
-                }
+                
+           
                 else
                 {
-                    Console.WriteLine("Some other combination");
+                    // Diagonal line
+                    int nPoints = (Math.Abs(line.x1 - line.x2) + 1);
+                    int startX = line.x1;
+                    int startY = line.y1;
+                    int xMove = (line.x1 > line.x2 ? -1 : 1);
+                    int yMove = (line.y1 > line.y2 ? -1 : 1);
+
+                    Enumerable.Range(0, nPoints)
+                            .Select(move => board[startY + move*yMove, startX + move*xMove]++)
+                             .ToArray();
                 }
 
 
