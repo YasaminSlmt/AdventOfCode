@@ -1,0 +1,16 @@
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\bin\Debug\net5.0\Day6Solution.exe
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\bin\Debug\net5.0\Day6Solution.deps.json
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\bin\Debug\net5.0\Day6Solution.runtimeconfig.json
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\bin\Debug\net5.0\Day6Solution.runtimeconfig.dev.json
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\bin\Debug\net5.0\Day6Solution.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\bin\Debug\net5.0\ref\Day6Solution.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\bin\Debug\net5.0\Day6Solution.pdb
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\obj\Debug\net5.0\Day6Solution.csproj.AssemblyReference.cache
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\obj\Debug\net5.0\Day6Solution.GeneratedMSBuildEditorConfig.editorconfig
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\obj\Debug\net5.0\Day6Solution.AssemblyInfoInputs.cache
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\obj\Debug\net5.0\Day6Solution.AssemblyInfo.cs
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\obj\Debug\net5.0\Day6Solution.csproj.CoreCompileInputs.cache
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\obj\Debug\net5.0\Day6Solution.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\obj\Debug\net5.0\ref\Day6Solution.dll
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\obj\Debug\net5.0\Day6Solution.pdb
+G:\My Drive\Yasamin\C#\AdventOfCode\Day6\Day6Solution\obj\Debug\net5.0\Day6Solution.genruntimeconfig.cache
