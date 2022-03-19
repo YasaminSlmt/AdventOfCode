@@ -8,15 +8,27 @@ namespace Day6Solution
 {
     public class Lanternfish
     {
-        public int days { get; set; }
-        public Lanternfish()
+        public Double daysLeft { get; set; }
+       
+
+        public Lanternfish(Double day) 
         {
-            days = 8;
+            daysLeft = day;
         }
 
-        public Lanternfish(int day)
+        public double CalculateTotalGrandChilderern(double nDays)
         {
-            days = day;
+            double gen = 0;
+            double totalGrandChilderern = 0;
+
+            while ((nDays  - daysLeft - (gen+1)*8) >= 7)
+            {
+                totalGrandChilderern += Math.Ceiling((nDays - daysLeft - gen * 8) / 7);
+                gen++;
+            }
+
+
+            return totalGrandChilderern;
         }
 
     }
@@ -26,41 +38,50 @@ namespace Day6Solution
         static void Main(string[] args)
         {
             string[] inputTxt = File.ReadAllLines(@"G:\My Drive\Yasamin\C#\AdventOfCode\Day6\input - Test.txt");
-            int nDays = 256;
+            Double nDays = 2;
 
-            List<string> initialDays = new List<string>();
-            initialDays = inputTxt[0].Split(',').ToList();
+            List<string> initialDaysStr = new List<string>();
+            initialDaysStr = inputTxt[0].Split(',').ToList();
 
             List<Lanternfish> fishes = new List<Lanternfish>();
             // to implement > should check that intial day of none of the fishes is 0
-            foreach(string day in initialDays)
-                fishes.Add(new Lanternfish(Convert.ToInt32(day))); // should try to rewrite using .Select()
-
-            for (int i = 0; i < nDays; i++)
+            double sum = 0.0;
+            foreach(string dayStr in initialDaysStr) 
             {
-                Console.WriteLine(i);
-                int newFishToAdd = 0;
-                foreach (Lanternfish fish in fishes)
-                {
-                    if (fish.days == 0)
-                    {
-                        fish.days = 7; // Set the days left to 7 instead of 6, because int he next step it will lose one. So by the end  of the day, it will still have 6 days left
-                        newFishToAdd++;
-                    }
-                    fish.days -= 1;
-
-                }                 
-
-                for (int j = 0; j < newFishToAdd; j++)
-                {
-                    fishes.Add(new Lanternfish());
-                }
-
-
+                Double day = Convert.ToDouble(dayStr);
+                fishes.Add(new Lanternfish(day)); // should try to rewrite using .Select()
+                
+                
             }
+            foreach(Lanternfish fish in fishes)
+                sum += fish.CalculateTotalGrandChilderern(nDays);
 
-            
-            Console.WriteLine("Total number of fishes after {0} days is {1}",nDays, fishes.Count);
+
+            //for (int i = 0; i < nDays; i++)
+            //{
+            //    Console.WriteLine(i);
+            //    int newFishToAdd = 0;
+            //    foreach (Lanternfish fish in fishes)
+            //    {
+            //        if (fish.days == 0)
+            //        {
+            //            fish.days = 7; // Set the days left to 7 instead of 6, because int he next step it will lose one. So by the end  of the day, it will still have 6 days left
+            //            newFishToAdd++;
+            //        }
+            //        fish.days -= 1;
+
+            //    }                 
+
+            //    for (int j = 0; j < newFishToAdd; j++)
+            //    {
+            //        fishes.Add(new Lanternfish());
+            //    }
+
+
+            //}
+
+
+            Console.WriteLine("Total number of fishes after {0} days is {1}",nDays, sum + fishes.Count);
 
         }
     }
