@@ -20,10 +20,11 @@ namespace Day6Solution
         {
             double gen = 0;
             double totalGrandChilderern = 0;
-
-            while ((nDays  - daysLeft - (gen+1)*8) >= 7)
+            if (nDays <  daysLeft)
+                    return 0;
+            while ((daysLeft -nDays + (gen)*8) < 0)
             {
-                totalGrandChilderern += Math.Ceiling((nDays - daysLeft - gen * 8) / 7);
+                totalGrandChilderern += -Math.Floor((daysLeft - nDays + gen * 8) / 7);
                 gen++;
             }
 
@@ -38,7 +39,7 @@ namespace Day6Solution
         static void Main(string[] args)
         {
             string[] inputTxt = File.ReadAllLines(@"G:\My Drive\Yasamin\C#\AdventOfCode\Day6\input - Test.txt");
-            Double nDays = 2;
+            Double nDays = 18;
 
             List<string> initialDaysStr = new List<string>();
             initialDaysStr = inputTxt[0].Split(',').ToList();
