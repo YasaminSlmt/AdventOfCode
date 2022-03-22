@@ -39,7 +39,7 @@ namespace Day6Solution
         static void Main(string[] args)
         {
             string[] inputTxt = File.ReadAllLines(@"G:\My Drive\Yasamin\C#\AdventOfCode\Day6\input - Test.txt");
-            Double nDays = 18;
+            Double nDays = 80;
 
             List<string> initialDaysStr = new List<string>();
             initialDaysStr = inputTxt[0].Split(',').ToList();
