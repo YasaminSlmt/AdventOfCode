@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "J63gaCPujDfVa6pB4U0m4f/yER/SHbAfAbBLGGzoid6aLvkah/mqT9NHq0WZEc47SL33cOjja1GBbvizB2q9ng==",
+  "dgSpecHash": "Y8vmTD7wWEPUaXzy4yXiFo+gHtFkTL3cejvC+omE7zaMot4Jt8wm/O0y1IHBkf7UwP/KP5/rwKKOMcERfv3HTA==",
   "success": true,
-  "projectFilePath": "G:\\My Drive\\Yasamin\\C#\\AdventOfCode\\Day6\\Day6Solution\\Day6Solution.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\C#\\AdventOfCode\\Day6\\Day6Solution\\Day6Solution.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.14\\microsoft.netcore.app.host.win-x64.5.0.14.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
