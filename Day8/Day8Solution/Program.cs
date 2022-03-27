@@ -37,7 +37,7 @@ namespace Day8Solution
                 {9,6 }, 
             };
 
-            string[] inputTxt = File.ReadAllLines(@"G:\My Drive\Yasamin\C#\AdventOfCode\Day8\input - Test.txt");
+            string[] inputTxt = File.ReadAllLines(@"G:\My Drive\Yasamin\C#\AdventOfCode\Day8\input.txt");
 
             int counter = 0;
             int sum = 0;
@@ -99,11 +99,11 @@ namespace Day8Solution
                 lineDigits[5] = Array.Find(possibleStrs, element => element.Length == 5 && !element.Equals(lineDigits[3]));
                 
                 // Find 2: The only 5 element that is left
-                lineDigits[2] = Array.Find(lineInput, element => element.Length == 5 && !element.Equals(lineDigits[3]) && !element.Equals(lineDigits[2]));
+                lineDigits[2] = Array.Find(lineInput, element => (element.Length == 5 && !element.Equals(lineDigits[3]) && !element.Equals(lineDigits[5])));
 
-                // Find 6: The only 6 element number which has all the letters of 5
+                // Find 6: The only 6 element number left which has all the letters of 5
                 possibleStrs = lineInput.Where(str => lineDigits[5].All(c => str.Contains(c))).ToArray();
-                lineDigits[6] = Array.Find(possibleStrs, element => element.Length == 6);
+                lineDigits[6] = Array.Find(possibleStrs, element => element.Length == 6 && !element.Equals(lineDigits[9]));
 
                 // Find 0: The only 6 element that is left
                 lineDigits[0] = Array.Find(lineInput, element => element.Length == 6 && !element.Equals(lineDigits[6]) && !element.Equals(lineDigits[9]));
